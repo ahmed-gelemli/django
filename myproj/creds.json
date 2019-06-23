@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "prefab-phoenix-244217",
+  "private_key_id": "89689707aad4e1d2d3a99db89f8b26f70fca8a5c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7qL8jWA/imxbO\no2ZfBDtUjig4Q3e2g+tRf2CmdSS/UuFKkF5P8WhmLNDiPSEzPDf2419oRhqV+I3B\n2Pryn/8T56uE08rIC4Vla0XMyAQ4W1Jw9sXLUwAc0h4NIZvbmwlZUwNFkvLkYBVY\n5jPlJfL5j1GRmTqdtLoEusBvoP2mUpb0jgcA+P4j3hFm4GQOncz4CV3PPvwcjjri\n+t1MZsyrm7mXAh8wTwOIDX+pst+AE2cEiMXKk7Y9pFsRjnXQTAFBvdghJ8kx5wD0\n65jbuDM3J7ulLmS90cBe0mBSXMpEz74YWpQwi1m9ml3mkXBPddrPGIna1pU+AVQ/\n1v/sYEVJAgMBAAECggEAKEv3J2bMmnOFNUA/Rl4JQ4H3PwW12jp/uJNqtLPo/TCV\n8kYICpCjQ3WSMVLBI1hmCB0RKroLEXM7NYobcShMRQD1guNb4xMeRQYBChVVWqi5\njkpfdObQ2l+AVn+GEWU8X7MEu9bvU30SeHGOaUF56H8PG/3UaXMaktNraU0fyqwJ\nVv/YNFzimNiAXrpom87TRPjm3369FBeGU+orBTw05EMUYnJb9FkSZS62fVedEP6+\niBpgQP+9bW+3U51yTA2845D8sJtWublOmmiGvO3Y2tGDag7RkCsX7F54W3lDzZ2U\nynM6i2fTJCr2DZ9oPtj3cmywRKmTKu2wCfCfdNTapQKBgQDgqSHAlzcgkBjC7dtV\nAJ0eprMmpq9WGpJ+1QsDXRY2nOlbdMir6GDXk4/B/SYvz5w7u6R1ncVcnoV0fjq7\nY8x4K1wSE/czXDiIVU4TH0e3R+shloGTe1onqMnTBpy8bx1mX/bRHa/rsb62NGyr\nxJRmaw689GINlF2RdEG8X+1eCwKBgQDV1kCTryK24+Gpg4nBSOo7ZDvlZsfrqeRo\nATG9YtKYDMTfzohtgGmZ81fa9dayjWpHxj8riCR53unXndhzSdgNo4JGqxYAnSl0\nIrJB4Dp2EKDiPxhLwdPgidKMWdrhajMptwsQPvaY2XxUt3u9m241zp23Q9BFAI7q\nL2uwxsgCewKBgQCsfzB7P6AEUJ+yjA8sZRw+vKAxvSpDYoO4/rtGCeNUa4aBwlmS\nJQq2e4aV3FnFvBKpipnr9Qfk5ZJyr7lIyIfmfORkvQ/BT73YcCdSZ2IZSA8x6u3y\n33OJn//XF+yggnCAeo54YeMBhah5HieSe422Vd0rGDlxU8nENQ+EI+ONoQKBgGzT\nWhAO/ILJXMoRWGUWv6Y0L8ti0HHeB5Dqsq6ogXbCYNtp18KqrJOd5WNY48gA8krO\n2M1FvxKK4MVL3qFlvl/Ki/19CniLg1JIaiHehMIbWlVqOOotHbBTU+T7wcogayNa\ntXWyJXvKi1zt+DqZxK/7lAZ1q6PCUfla4tqXf6jLAoGBAN7HbLA+x1D+78iLz0aq\nTSxONCQtRyFLOmDsJUlGK957zutIHdJurhT2Umh4jKjwqm6xoeXmTZXa7fB27Pmr\nXo57Pp9snS6dFvH7VINHVFvVLHhdATTn3UsknuWiG1qczC1Tw4lRj0BRn0pjkxJf\nb/cTHKy33LFSNXNbmJXas+YI\n-----END PRIVATE KEY-----\n",
+  "client_email": "ahmed-27@prefab-phoenix-244217.iam.gserviceaccount.com",
+  "client_id": "107808879964730776883",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ahmed-27%40prefab-phoenix-244217.iam.gserviceaccount.com"
+}
