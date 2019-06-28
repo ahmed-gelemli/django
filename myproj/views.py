@@ -32,15 +32,16 @@ def submitted(request):
 
     usernameInput = username
     passwordInput = password
-
+    f_accgrant = open('templates/accgrant.html', 'r')
+    f_accnotgrant = open('templates/accnotgrant.html', 'r')
     if usernameInput in usernameCol:
         value_index = usernameCol.index(usernameInput)
         try:
             if passwordInput == passwordCol[value_index]:
-                return HttpResponse("Access Granted!")
+                return HttpResponse(f_accgrant)
         except:
-            return HttpResponse("Check your Password!")
+            return HttpResponse(f_accnotgrant)
     else:
-        return HttpResponse("Check your Username!")
+        return HttpResponse(f_accnotgrant)
 
     # return render(request, 'submitted.html', context)
