@@ -8,7 +8,11 @@ def homepage(request):
     
     return render(request , 'login_form.html')
 
-# After this Google API Start
+def createaccounthomepage(request):
+    f_create = open('templates/create.html')
+    return HttpResponse(f_create)
+
+# After this Google API Starts
 
 scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("myproj/creds.json", scope)
@@ -17,6 +21,7 @@ sheet = client.open("Database").sheet1   #SheetName
 usernameCol = sheet.col_values(1)
 passwordCol = sheet.col_values(2)
 
+# Before this Google API Ends
 
 def submitted(request):
     data = request.POST.copy()
@@ -45,3 +50,25 @@ def submitted(request):
         return HttpResponse(f_accnotgrant)
 
     # return render(request, 'submitted.html', context)
+
+def createaccount(request):
+    data = request.POST.copy()
+    context = {
+        "newusername" : data.get('NewUsernameInput'),
+        "newpassword" : data.get('NewPasswordInput'),
+        "confirmpassword" : data.get('ConfirmPasswordInput')
+    }
+
+    newusername = context['newusername'] 
+    newpassword = context['newpassword']
+    confirmpassword = context['confirmpassword']
+
+    if newusername in usernameCol:
+        return HttpResponse("This Username alredy in use. Please try another.")
+    else:
+        if newpassword == confirmpassword:
+            newUserPassRow = [newusername , newpassword]
+            sheet.append_row(newUserPassRow)
+            return HttpResponse('We created your account. Welcome to family!')
+        else:
+            return HttpResponse("Passwords* aren't same! *(New Password and Confirm Password).")
