@@ -20,6 +20,7 @@ client = gspread.authorize(creds)
 sheet = client.open("Database").sheet1   #SheetName
 usernameCol = sheet.col_values(1)
 passwordCol = sheet.col_values(2)
+emailCol = sheet.col_values(3)
 
 # Before this Google API Ends
 
@@ -55,22 +56,24 @@ def createaccount(request):
     data = request.POST.copy()
     context = {
         "newusername" : data.get('NewUsernameInput'),
+        "email" : data.get('inputEmail'),
         "newpassword" : data.get('NewPasswordInput'),
         "confirmpassword" : data.get('ConfirmPasswordInput')
     }
 
-    newusername = context['newusername'] 
+    newusername = context['newusername']
+    email = context['email']
     newpassword = context['newpassword']
     confirmpassword = context['confirmpassword']
 
-    if newusername in usernameCol:
-        return HttpResponse("This Username alredy in use. Please try another.")
+    if (newusername in usernameCol) or (email in emailCol):
+        return HttpResponse("This Username or Email alredy in use. Please try another.")
     else:
         if len(newpassword) < 6:
             return HttpResponse("Password must be 6 or more character!")
         else:
             if newpassword == confirmpassword:
-                newUserPassRow = [newusername , newpassword]
+                newUserPassRow = [newusername , newpassword , email]
                 sheet.append_row(newUserPassRow)
                 return HttpResponse('We created your account. Welcome to family!')
             else:

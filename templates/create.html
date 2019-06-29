@@ -40,16 +40,27 @@
         .form-create .form-control:focus {
         z-index: 2;
         }
-        .form-create input[type="text"] {
-        margin-bottom: -1px;
+        /*Form Elements Start*/
+        .form-create input[name="NewUsernameInput"] {
+        margin-top: 30px;
+        margin-bottom: -2px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         }
-        .form-create input[type="password"] {
+        .form-create input[name="inputEmail"] {
+        margin-bottom: -1px;
+        border-radius: 0;
+        }
+        .form-create input[name="NewPasswordInput"] {
+        margin-bottom: -1px;
+        border-radius: 0;
+        }
+        .form-create input[name="ConfirmPasswordInput"] {
         margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         }
+        /*Form Elements End*/
         .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -58,7 +69,6 @@
         -ms-user-select: none;
         user-select: none;
         }
-
         @media (min-width: 768px) {
         .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -70,9 +80,10 @@
     <form method="POST" class="form-create" action="/createaccount/">
         <input type="hidden" name="csrfmiddlewaretoken" value="buBN56kthFpbXzFFgwC4vDPABnUeXVdVtj5oFeVmBiB9EoR80bb2zud6iUBcVcU6"> <!-- This is csrf token-->
         <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
-        <input type="text" id="inputUsername" class="form-control" placeholder="New Username" name="NewUsernameInput" required autofocus>
-        <input type="password" id="inputPassword" class="form-control" placeholder="New Password" name="NewPasswordInput" style="border-radius: 0; margin-bottom: -1px" required>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" name="ConfirmPasswordInput" required>
+        <input type="text" class="form-control" placeholder="New Username" name="NewUsernameInput" required autofocus>
+        <input type="email" class="form-control" placeholder="Email" name="inputEmail" required>
+        <input type="password" class="form-control" placeholder="New Password" name="NewPasswordInput" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" name="ConfirmPasswordInput" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button><br>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
