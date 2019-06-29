@@ -66,9 +66,12 @@ def createaccount(request):
     if newusername in usernameCol:
         return HttpResponse("This Username alredy in use. Please try another.")
     else:
-        if newpassword == confirmpassword:
-            newUserPassRow = [newusername , newpassword]
-            sheet.append_row(newUserPassRow)
-            return HttpResponse('We created your account. Welcome to family!')
+        if len(newpassword) < 6:
+            return HttpResponse("Password must be 6 or more character!")
         else:
-            return HttpResponse("Passwords* aren't same! *(New Password and Confirm Password).")
+            if newpassword == confirmpassword:
+                newUserPassRow = [newusername , newpassword]
+                sheet.append_row(newUserPassRow)
+                return HttpResponse('We created your account. Welcome to family!')
+            else:
+                return HttpResponse("Passwords* aren't same! *(New Password and Confirm Password).")
